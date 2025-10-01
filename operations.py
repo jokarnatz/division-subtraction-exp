@@ -2,9 +2,7 @@
 # the division manualy as a subtraction
 # method
 from time import perf_counter_ns
-
-from helper_modules.get_input import get_input
-from helper_modules.handle_sign import handle_sign
+from helper_modules import get_input, handle_sign
 
 def get_numbers() ->tuple[float,float]:
     dividend:  float = get_input("Dividend: ", float)
