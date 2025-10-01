@@ -4,12 +4,14 @@
 from time import perf_counter_ns
 
 from helper_modules.get_input import get_input
+from helper_modules.handle_sign import handle_sign
 
 def get_numbers() ->tuple[float,float]:
     dividend:  float = get_input("Dividend: ", float)
     divisor: float =  get_input("Divisor: ", float, excluded_values=[0])
     return dividend, divisor
 
+@handle_sign
 def  operate_division(dividend: float, divisor: float) -> tuple[float,int,int]:
     if dividend and divisor:
         t1: int = perf_counter_ns()
